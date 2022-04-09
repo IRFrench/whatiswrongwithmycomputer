@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Blog</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let blog of blog_posts; let i = index">
+    <ion-card [routerLink]=[blog.url]>
+      <ion-card-header>
+        <ion-card-title>{{blog.title}}</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        {{blog.snap}}
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>
